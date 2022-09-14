@@ -23,7 +23,7 @@ class BestMovies extends React.Component {
     componentDidMount = () => {
       //const { user } = this.props.auth0;
       axios
-      .get(`https://class12backend.herokuapp.com/Movie`)
+      .get(`https://react-example-mgiatpk.herokuapp.com/Movie`)
       .then(result =>{
         console.log(result.data);
         this.setState({
@@ -49,7 +49,7 @@ class BestMovies extends React.Component {
       }
   
       axios
-      .post(`https://class12backend.herokuapp.com/Movie`, obj)
+      .post(`https://react-example-mgiatpk.herokuapp.com/Movie`, obj)
       .then(result =>{
         return this.setState({
           MovieArr : result.data
@@ -63,7 +63,7 @@ class BestMovies extends React.Component {
     deleteMovie = (id) => {
       const { user } = this.props.auth0;
       axios
-        .delete(`https://class12backend.herokuapp.com/Movie/${id}?name=${user.email}`)
+        .delete(`https://react-example-mgiatpk.herokuapp.com/Movie/${id}?name=${user.email}`)
         .then((result) => {
           console.log('done');
           
@@ -103,7 +103,7 @@ class BestMovies extends React.Component {
         }
         const id = this.state.currentMovie;
         axios
-        .put(`https://class12backend.herokuapp.com/Movie/${id}`, currentMovieData)
+        .put(`https://react-example-mgiatpk.herokuapp.com/Movie/${id}`, currentMovieData)
         .then(result=>{
           this.setState({
             MovieArr : result.data
