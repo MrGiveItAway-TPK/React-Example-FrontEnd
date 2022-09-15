@@ -118,7 +118,7 @@ class BestMovies extends React.Component {
 
  
   render() {
-    const { isAuthenticated } = this.props.auth0;
+    //const { isAuthenticated } = this.props.auth0;
    
 
 

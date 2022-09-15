@@ -19,6 +19,16 @@ body {
     text-align: center;
 }
 
+.header {
+    background-color: orangered;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+}
+
 .navbar-brand {
  color: black !important; 
 }

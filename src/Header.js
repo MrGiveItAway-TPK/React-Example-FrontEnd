@@ -9,14 +9,15 @@ class Header extends React.Component {
   render() {
     const { isAuthenticated } = this.props.auth0;
     return (
-      <Navbar collapseOnSelect expand="lg"  variant="dark">
-        <Navbar.Brand >My Favorite Movies ..</Navbar.Brand>
-        <NavItem><Link to="/" className="nav-link">Home </Link></NavItem>
+      <header className="header">
+      <Navbar>
+        <Navbar.Brand >Movies Library</Navbar.Brand>
+        <NavItem><Link to="/" className="nav-link">Home</Link></NavItem>
         {isAuthenticated && <NavItem className="nav"><Link to="/profile" className="nav-link">Profile</Link></NavItem>}
-        <NavItem><Login /></NavItem>
-        <NavItem><Logout /></NavItem>
-        {/* PLACEHOLDER: render a navigation link to the about page */}
+        <NavItem><Login/></NavItem>
+        <NavItem><Logout/></NavItem>
       </Navbar>
+    </header>
     )
   }
 }
