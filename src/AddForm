@@ -7,12 +7,12 @@ import Form from 'react-bootstrap/Form';
 class AddForm extends React.Component {
     render() {
         return (
-            <Modal show={show} onHide={handleClose}>
-            <Modal.Header closeButton>
-              <Modal.Title>Modal heading</Modal.Title>
-            </Modal.Header>
-            <Modal.Body>
-            <Form onSubmit={this.addMovie} >
+            <Modal show={this.props.show} onHide={this.props.handleClose}>
+                <Modal.Header closeButton>
+                    <Modal.Title>Add</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+            <Form onSubmit={this.props.addMovie} >
           <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Control type="text" name='title' placeholder="Enter Movie title" />
           </Form.Group>
@@ -25,14 +25,13 @@ class AddForm extends React.Component {
           <Form.Group className="mb-3" controlId="formBasicSubmitbox">
           <Button type='Submit' >Add</Button>
           </Form.Group>
-          </Form>
-            </Modal.Body>
-            <Modal.Footer>
-              <Button variant="secondary" onClick={handleClose}>
-                Close
-              </Button>
-            </Modal.Footer>
-          </Modal>
+            <Button variant="primary" type="Submit">
+                            update
+                        </Button>
+                        </Form>
+                </Modal.Body>
+                
+            </Modal>
         )
     }
 }

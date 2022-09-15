@@ -124,8 +124,7 @@ class BestMovies extends React.Component {
       <AddForm
                   show = {this.state.showFlag}
                   handleClose = {this.handleClose}
-                  updateMovie= {this.updateMovie}
-                  currentMovie = {this.state.currentMovie}
+                  addMovie= {this.addMovie}
                   />
       
         {this.state.MovieArr.length ? 
