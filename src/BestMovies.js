@@ -11,6 +11,7 @@ import { withAuth0 } from '@auth0/auth0-react';
 
 
 class BestMovies extends React.Component {
+  
   constructor(props){
     super(props);
     this.state = {
@@ -114,14 +115,12 @@ class BestMovies extends React.Component {
           console.log(err);
         })
       }
+    }
+      function Example() {
+      const [show, setShow] = useState(false);
 
-
- 
-  render() {
-    const { isAuthenticated } = this.props.auth0;
-    const [show, setShow] = useState(false);
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
 
     return (
@@ -191,6 +190,7 @@ class BestMovies extends React.Component {
     
    );
   }
-}
+  render(<Example />);
+
 
 export default withAuth0(BestMovies) ;
