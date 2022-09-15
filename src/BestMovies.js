@@ -5,7 +5,6 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal'
 import Form from 'react-bootstrap/Form';
 import UpdateForm from './UpdateForm';
-import AddForm from './AddForm';
 import { withAuth0 } from '@auth0/auth0-react';
 
 
@@ -116,16 +115,44 @@ class BestMovies extends React.Component {
         })
       }
 
+
+ 
   render() {
     const { isAuthenticated } = this.props.auth0;
+   
+
 
     return (
+      
       <>
-      <AddForm
-                  show = {this.state.showFlag}
-                  handleClose = {this.handleClose}
-                  addMovie= {this.addMovie}
-                  />
+
+      <Modal.Dialog>
+      <Modal.Header closeButton>
+        <Modal.Title>Modal title</Modal.Title>
+      </Modal.Header>
+
+      <Modal.Body>
+        <Form onSubmit={this.addMovie} >
+      <Form.Group className="mb-3" controlId="formBasicEmail">
+      <Form.Control type="text" name='title' placeholder="Enter Movie title" />
+      </Form.Group>
+      <Form.Group className="mb-3" controlId="formBasicPassword">
+      <Form.Control type="text" name='description' placeholder="Enter Movie description" />
+      </Form.Group>
+      <Form.Group className="mb-3" controlId="formBasicCheckbox">
+      <Form.Control type="text" name='status' placeholder="Enter Movie status" />
+      </Form.Group>
+      <Form.Group className="mb-3" controlId="formBasicSubmitbox">
+      <Button type='Submit' >Add</Button>
+      </Form.Group>
+      </Form>
+      </Modal.Body>
+
+      <Modal.Footer>
+        <Button variant="secondary">Close</Button>
+      </Modal.Footer>
+    </Modal.Dialog>
+    
       
         {this.state.MovieArr.length ? 
             <Carousel fade>
@@ -157,7 +184,7 @@ class BestMovies extends React.Component {
                   />
       </>
     
-);
+   );
   }
 }
 
