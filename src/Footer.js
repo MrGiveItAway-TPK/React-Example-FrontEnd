@@ -5,7 +5,7 @@ class Footer extends React.Component {
   render() {
     return (
     <footer className="footer">
-        <p>This is react sticky footer!!</p>
+        <p>React Example App - Munes Bani Fawaz 2022</p>
     </footer>
     )
   }
