@@ -8,7 +8,6 @@ ReactDOM.render(
     domain="dev-iw-t4rfj.us.auth0.com"
     clientId="cGigR6skj9gKFJdLzifXfFM1nZ0AiVfU"
     redirectUri={window.location.origin}
-    onRedirectCallback={onRedirectCallback}
     useRefreshTokens
     cacheLocation="localstorage"
   >
