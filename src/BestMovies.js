@@ -118,7 +118,7 @@ class BestMovies extends React.Component {
 
  
   render() {
-    //const { isAuthenticated } = this.props.auth0;
+    const { isAuthenticated } = this.props.auth0;
    
 
 
@@ -162,7 +162,7 @@ class BestMovies extends React.Component {
                 return(
                  
                   <Carousel.Item>
-                    <img class="d-block w-100" height="480" src={require("./bg_slide.jpg")} alt="Slide"/>
+                    <img class="d-block w-100" height="480" src={require("./images/bg_slide.jpg")} alt="Slide"/>
                     <Carousel.Caption>
                         <h3>Movie title: {item.title}</h3>
                         <p>Movie description:{item.description}</p>
