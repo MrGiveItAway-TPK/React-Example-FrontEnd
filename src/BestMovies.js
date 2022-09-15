@@ -119,20 +119,24 @@ class BestMovies extends React.Component {
  
   render() {
     const { isAuthenticated } = this.props.auth0;
-   
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
 
     return (
       
       <>
+      <Button variant="primary" onClick={handleShow}>
+        Launch demo modal
+      </Button>
 
-      <Modal.Dialog>
-      <Modal.Header closeButton>
-        <Modal.Title>Modal title</Modal.Title>
-      </Modal.Header>
-
-      <Modal.Body>
-        <Form onSubmit={this.addMovie} >
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Modal heading</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+		<Form onSubmit={this.addMovie} >
       <Form.Group className="mb-3" controlId="formBasicEmail">
       <Form.Control type="text" name='title' placeholder="Enter Movie title" />
       </Form.Group>
@@ -146,13 +150,13 @@ class BestMovies extends React.Component {
       <Button type='Submit' >Add</Button>
       </Form.Group>
       </Form>
-      </Modal.Body>
-
-      <Modal.Footer>
-        <Button variant="secondary">Close</Button>
-        <Button variant="primary">Save changes</Button>
-      </Modal.Footer>
-    </Modal.Dialog>
+		</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
     
       
         {this.state.MovieArr.length ? 
