@@ -160,7 +160,6 @@ class BestMovies extends React.Component {
             <Carousel fade>
               {this.state.MovieArr.map(item => {
                 return(
-                 
                   <Carousel.Item>
                     <img class="d-block w-100" height="480" src={require("./images/bg_slide.jpg")} alt="Slide"/>
                     <Carousel.Caption>

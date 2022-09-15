@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from 'react-bootstrap/Navbar';
+import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
 
 class Footer extends React.Component {
   render() {
