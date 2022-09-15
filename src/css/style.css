@@ -22,3 +22,20 @@ body {
 .navbar-brand {
  color: black !important; 
 }
+
+.center {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	height:40vh;
+	width:40vw;
+	display: table;
+}
+
+.center_div_elements {
+	display: table-cell;
+	vertical-align: middle;
+	text-align:center
+}
