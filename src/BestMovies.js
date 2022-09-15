@@ -5,13 +5,13 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal'
 import Form from 'react-bootstrap/Form';
 import UpdateForm from './UpdateForm';
+import AddForm from './AddForm';
 import { withAuth0 } from '@auth0/auth0-react';
 
 
 
 
 class BestMovies extends React.Component {
-  
   constructor(props){
     super(props);
     this.state = {
@@ -115,48 +115,20 @@ class BestMovies extends React.Component {
           console.log(err);
         })
       }
-    }
-      function Example() {
-      const [show, setShow] = useState(false);
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
 
+ 
+  render() {
+    const { isAuthenticated } = this.props.auth0;
 
     return (
-      
       <>
-      <Button variant="primary" onClick={handleShow}>
-        Launch demo modal
-      </Button>
-
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-		<Form onSubmit={this.addMovie} >
-      <Form.Group className="mb-3" controlId="formBasicEmail">
-      <Form.Control type="text" name='title' placeholder="Enter Movie title" />
-      </Form.Group>
-      <Form.Group className="mb-3" controlId="formBasicPassword">
-      <Form.Control type="text" name='description' placeholder="Enter Movie description" />
-      </Form.Group>
-      <Form.Group className="mb-3" controlId="formBasicCheckbox">
-      <Form.Control type="text" name='status' placeholder="Enter Movie status" />
-      </Form.Group>
-      <Form.Group className="mb-3" controlId="formBasicSubmitbox">
-      <Button type='Submit' >Add</Button>
-      </Form.Group>
-      </Form>
-		</Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-        </Modal.Footer>
-      </Modal>
-    
+      <AddForm
+                  show = {this.state.showFlag}
+                  handleClose = {this.handleClose}
+                  updateMovie= {this.updateMovie}
+                  currentMovie = {this.state.currentMovie}
+                  />
       
         {this.state.MovieArr.length ? 
             <Carousel fade>
@@ -190,7 +162,6 @@ class BestMovies extends React.Component {
     
    );
   }
-  render(<Example />);
-
+}
 
 export default withAuth0(BestMovies) ;
