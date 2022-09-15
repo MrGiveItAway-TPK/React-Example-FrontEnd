@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
 
-class UpdateForm extends React.Component {
+class AddForm extends React.Component {
     render() {
         return (
             <Modal show={show} onHide={handleClose}>
@@ -37,4 +37,4 @@ class UpdateForm extends React.Component {
     }
 }
 
-export default UpdateForm;
+export default AddForm;
