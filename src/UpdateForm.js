@@ -19,8 +19,8 @@ class UpdateForm extends React.Component {
                         </Form.Group>
 
                         <Form.Group className="mb-3" controlId="formBasicPassword">
-                            <Form.Label>Movie discription</Form.Label>
-                            <Form.Control type="text" placeholder="Movie discription" name="discription"  defaultValue={this.props.currentMovie.discription}/>
+                            <Form.Label>Movie description</Form.Label>
+                            <Form.Control type="text" placeholder="Movie description" name="description"  defaultValue={this.props.currentMovie.description}/>
                         </Form.Group>
 
                         <Form.Group className="mb-3" controlId="formBasicPassword">

@@ -42,7 +42,7 @@ class BestMovies extends React.Component {
       const { user } = this.props.auth0;
       const obj = {
         title : event.target.title.value,
-        discription: event.target.discription.value,
+        description: event.target.description.value,
         status: event.target.status.value,
         name:user.email
 
@@ -97,7 +97,7 @@ class BestMovies extends React.Component {
         const { user } = this.props.auth0;
         let currentMovieData = {
           title : event.target.title.value,
-          discription : event.target.discription.value,
+          description : event.target.description.value,
           status : event.target.status.value,
           name:user.email
         }
@@ -138,7 +138,7 @@ class BestMovies extends React.Component {
       <Form.Control type="text" name='title' placeholder="Enter Movie title" />
       </Form.Group>
       <Form.Group className="mb-3" controlId="formBasicPassword">
-      <Form.Control type="text" name='discription' placeholder="Enter Movie discription" />
+      <Form.Control type="text" name='description' placeholder="Enter Movie description" />
       </Form.Group>
       <Form.Group className="mb-3" controlId="formBasicCheckbox">
       <Form.Control type="text" name='status' placeholder="Enter Movie status" />
@@ -165,7 +165,7 @@ class BestMovies extends React.Component {
                     <img class="d-block w-100" height="480" src={require("./bg_slide.jpg")} alt="Slide"/>
                     <Carousel.Caption>
                         <h3>Movie title: {item.title}</h3>
-                        <p>Movie discription:{item.discription}</p>
+                        <p>Movie description:{item.description}</p>
                         <p>Movie status :{item.status}</p>
                         <Button  onClick={() => this.deleteMovie(item._id)}>Delete</Button>
                         <Button onClick={() => this.openForm(item._id)}>update</Button>
