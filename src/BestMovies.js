@@ -116,8 +116,6 @@ class BestMovies extends React.Component {
         })
       }
 
-
- 
   render() {
     const { isAuthenticated } = this.props.auth0;
 
@@ -160,7 +158,7 @@ class BestMovies extends React.Component {
                   />
       </>
     
-   );
+);
   }
 }
 
