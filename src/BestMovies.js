@@ -2,8 +2,8 @@ import React from 'react';
 import axios from 'axios';
 import Carousel from "react-bootstrap/Carousel";
 import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal'
 import Form from 'react-bootstrap/Form';
-import Modal from 'react-bootstrap/Modal';
 import UpdateForm from './UpdateForm';
 import { withAuth0 } from '@auth0/auth0-react';
 
@@ -118,22 +118,21 @@ class BestMovies extends React.Component {
 
  
   render() {
-    //const { isAuthenticated } = this.props.auth0;
+    const { isAuthenticated } = this.props.auth0;
    
 
 
     return (
       
       <>
-      
-      <div>
-        <Modal.Dialog>
+
+      <Modal.Dialog>
       <Modal.Header closeButton>
-        <Modal.Title>AddMovie</Modal.Title>
+        <Modal.Title>Modal title</Modal.Title>
       </Modal.Header>
 
       <Modal.Body>
-      <Form onSubmit={this.addMovie} >
+        <Form onSubmit={this.addMovie} >
       <Form.Group className="mb-3" controlId="formBasicEmail">
       <Form.Control type="text" name='title' placeholder="Enter Movie title" />
       </Form.Group>
@@ -147,11 +146,11 @@ class BestMovies extends React.Component {
       <Button type='Submit' >Add</Button>
       </Form.Group>
       </Form>
-      
       </Modal.Body>
 
       <Modal.Footer>
-        
+        <Button variant="secondary">Close</Button>
+        <Button variant="primary">Save changes</Button>
       </Modal.Footer>
     </Modal.Dialog>
     
@@ -184,19 +183,6 @@ class BestMovies extends React.Component {
                   updateMovie= {this.updateMovie}
                   currentMovie = {this.state.currentMovie}
                   />
-                
-        
-
-      </div>
-      
-      
-      
-      
-      
-     
-      
-       
-        
       </>
     
    );
