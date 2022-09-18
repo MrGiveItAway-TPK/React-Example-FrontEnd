@@ -125,13 +125,7 @@ class BestMovies extends React.Component {
     return (
       
       <>
-
-      <Modal.Dialog>
-      <Modal.Header closeButton>
-        <Modal.Title>Modal title</Modal.Title>
-      </Modal.Header>
-
-      <Modal.Body>
+      <div className='div_form'>
         <Form onSubmit={this.addMovie} >
       <Form.Group className="mb-3" controlId="formBasicEmail">
       <Form.Control type="text" name='title' placeholder="Enter Movie title" />
@@ -146,14 +140,8 @@ class BestMovies extends React.Component {
       <Button type='Submit' >Add</Button>
       </Form.Group>
       </Form>
-      </Modal.Body>
+      </div>
 
-      <Modal.Footer>
-        <Button variant="secondary">Close</Button>
-      </Modal.Footer>
-    </Modal.Dialog>
-    
-      
         {this.state.MovieArr.length ? 
             <Carousel fade>
               {this.state.MovieArr.map(item => {
