@@ -153,8 +153,8 @@ class BestMovies extends React.Component {
                   updateMovie= {this.updateMovie}
                   currentMovie = {this.state.currentMovie}
                   />
-                  
-      <div className='center'>
+
+      <div className='center_add'>
         <div className='center_div_elements'>
         <Form onSubmit={this.addMovie} >
       <Form.Group className="mb-3" controlId="formBasicEmail">

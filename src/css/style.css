@@ -21,9 +21,7 @@ body {
 
 .header {
     background-color: orangered;
-    position: fixed;
     width: 100%;
-    top: 0;
     color: white;
     font-size: 25px;
     text-align: center;
@@ -42,6 +40,18 @@ body {
 	height:40vh;
 	width:40vw;
 	display: table;
+}
+
+.center_add {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	height:40vh;
+	width:40vw;
+	display: table;
+    margin-top:25vh;
 }
 
 .center_div_elements {
