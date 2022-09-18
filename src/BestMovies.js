@@ -145,7 +145,7 @@ class BestMovies extends React.Component {
             )
           }
           </Carousel>
-          : <h3>No Movies Found </h3> 
+          : <h3 className='centered_h3'>No Movies Found </h3> 
         } 
         <UpdateForm
                   show = {this.state.showFlag}
@@ -154,7 +154,7 @@ class BestMovies extends React.Component {
                   currentMovie = {this.state.currentMovie}
                   />
 
-      <div className='center_add'>
+      <div className='center_add_form'>
         <div className='center_div_elements'>
         <Form onSubmit={this.addMovie} >
       <Form.Group className="mb-3" controlId="formBasicEmail">

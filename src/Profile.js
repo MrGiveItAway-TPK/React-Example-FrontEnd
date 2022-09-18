@@ -5,12 +5,7 @@ class Profile extends Component {
   render() {
     const { user } = this.props.auth0;
     return <div>
-        <p>Hello {user.name}</p>
-       
-        
-        
-        
-        
+        <h3 className='centered_h3'>Hello {user.name}</h3>
         </div>;
   }
 }
