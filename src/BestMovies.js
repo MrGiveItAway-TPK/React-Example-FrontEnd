@@ -125,24 +125,7 @@ class BestMovies extends React.Component {
     return (
       
       <>
-      <div className='div_form'>
-        <Form onSubmit={this.addMovie} >
-      <Form.Group className="mb-3" controlId="formBasicEmail">
-      <Form.Control type="text" name='title' placeholder="Enter Movie title" />
-      </Form.Group>
-      <Form.Group className="mb-3" controlId="formBasicPassword">
-      <Form.Control type="text" name='description' placeholder="Enter Movie description" />
-      </Form.Group>
-      <Form.Group className="mb-3" controlId="formBasicCheckbox">
-      <Form.Control type="text" name='status' placeholder="Enter Movie status" />
-      </Form.Group>
-      <Form.Group className="mb-3" controlId="formBasicSubmitbox">
-      <Button type='Submit' >Add</Button>
-      </Form.Group>
-      </Form>
-      </div>
-
-        {this.state.MovieArr.length ? 
+      {this.state.MovieArr.length ? 
             <Carousel fade>
               {this.state.MovieArr.map(item => {
                 return(
@@ -170,6 +153,25 @@ class BestMovies extends React.Component {
                   updateMovie= {this.updateMovie}
                   currentMovie = {this.state.currentMovie}
                   />
+                  
+      <div className='center'>
+        <div className='center_div_elements'>
+        <Form onSubmit={this.addMovie} >
+      <Form.Group className="mb-3" controlId="formBasicEmail">
+      <Form.Control type="text" name='title' placeholder="Enter Movie title" />
+      </Form.Group>
+      <Form.Group className="mb-3" controlId="formBasicPassword">
+      <Form.Control type="text" name='description' placeholder="Enter Movie description" />
+      </Form.Group>
+      <Form.Group className="mb-3" controlId="formBasicCheckbox">
+      <Form.Control type="text" name='status' placeholder="Enter Movie status" />
+      </Form.Group>
+      <Form.Group className="mb-3" controlId="formBasicSubmitbox">
+      <Button type='Submit' >Add</Button>
+      </Form.Group>
+      </Form>
+      </div>
+      </div>
       </>
     
    );
