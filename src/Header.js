@@ -13,7 +13,7 @@ class Header extends React.Component {
       <Navbar>
         <Navbar.Brand >Movies Library</Navbar.Brand>
         <NavItem><Link to="/" className="nav-link">Home</Link></NavItem>
-        {isAuthenticated && <NavItem className="nav"><Link to="/profile" className="nav-link">Profile</Link></NavItem>}
+        {isAuthenticated && <NavItem><Link to="/profile" className="nav-link">Profile</Link></NavItem>}
         <NavItem><Login/></NavItem>
         <NavItem><Logout/></NavItem>
       </Navbar>
