@@ -25,7 +25,7 @@ class BestMovies extends React.Component {
       axios
       .get(`https://react-example-mgiatpk.herokuapp.com/Movie`)
       .then(result =>{
-        return this.setState({
+        this.setState({
           MovieArr : result.data
         })
       })
