@@ -14,8 +14,8 @@ class Header extends React.Component {
         <Navbar.Brand >Movies Library</Navbar.Brand>
         <NavItem><Link to="/" className="nav-link">Home</Link></NavItem>
         {isAuthenticated && <NavItem><Link to="/profile" className="nav-link">Profile</Link></NavItem>}
-        <NavItem><Login/></NavItem>
-        <NavItem><Logout/></NavItem>
+        {!isAuthenticated && <NavItem><Login/></NavItem>}
+        {isAuthenticated && <NavItem><Logout/></NavItem>}
       </Navbar>
     </header>
     )
