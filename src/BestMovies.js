@@ -67,7 +67,6 @@ class BestMovies extends React.Component {
           this.setState({
             MovieArr : result.data
           });
-          this.componentDidMount();
         })
         .catch((err) => {
           console.log(err);
