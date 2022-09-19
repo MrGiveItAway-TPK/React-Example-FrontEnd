@@ -126,8 +126,8 @@ class BestMovies extends React.Component {
                         <h3>Movie title: {item.title}</h3>
                         <p>Movie description:{item.description}</p>
                         <p>Movie status :{item.status}</p>
-                        <Button  onClick={() => this.deleteMovie(item._id)}>Delete</Button>
-                        <Button onClick={() => this.openForm(item._id)}>update</Button>
+                        <Button className='modal_buttons' onClick={() => this.deleteMovie(item._id)}>Delete</Button>
+                        <Button className='modal_buttons' onClick={() => this.openForm(item._id)}>Update</Button>
                     </Carousel.Caption>
                   </Carousel.Item>
                 

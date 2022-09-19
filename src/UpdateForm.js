@@ -28,8 +28,8 @@ class UpdateForm extends React.Component {
                             <Form.Control type="text" placeholder="Movie status" name="status"  defaultValue={this.props.currentMovie.status}/>
                         </Form.Group>
 
-                        <Button variant="primary" type="Submit">
-                            update
+                        <Button className='modal_buttons' variant="primary" type="Submit">
+                            Update
                         </Button>
 
                     </Form>
