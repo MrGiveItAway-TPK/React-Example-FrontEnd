@@ -59,15 +59,15 @@ class BestMovies extends React.Component {
       })
     }
 
-    deleteMovie = (event,id) => {
-      event.preventDefault();
+    deleteMovie = (id) => {
       const { user } = this.props.auth0;
       axios
         .delete(`https://react-example-mgiatpk.herokuapp.com/Movie/${id}?name=${user.email}`)
         .then((result) => {
           this.setState({
             MovieArr : result.data
-          })
+          });
+          this.componentDidMount();
         })
         .catch((err) => {
           console.log(err);
