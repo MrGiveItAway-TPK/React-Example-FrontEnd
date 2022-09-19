@@ -21,11 +21,10 @@ class BestMovies extends React.Component {
   }
   
     componentDidMount = () => {
-      //const { user } = this.props.auth0;
+      const { user } = this.props.auth0;
       axios
       .get(`https://react-example-mgiatpk.herokuapp.com/Movie`)
       .then(result =>{
-        console.log(result.data);
         this.setState({
           MovieArr : result.data
         })
@@ -65,8 +64,6 @@ class BestMovies extends React.Component {
       axios
         .delete(`https://react-example-mgiatpk.herokuapp.com/Movie/${id}?name=${user.email}`)
         .then((result) => {
-          console.log('done');
-          
           this.setState({
             MovieArr: result.data,
           });
