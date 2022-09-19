@@ -20,8 +20,7 @@ class BestMovies extends React.Component {
     }
   }
   
-    componentDidMount = (event) => {
-      event.preventDefault();
+    componentDidMount = () => {
       const { user } = this.props.auth0;
       axios
       .get(`https://react-example-mgiatpk.herokuapp.com/Movie`)
