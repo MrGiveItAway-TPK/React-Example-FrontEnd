@@ -21,9 +21,9 @@ class BestMovies extends React.Component {
   }
   
     componentDidMount = () => {
-      //const { user } = this.props.auth0;
+      const { user } = this.props.auth0;
       axios
-      .get(`https://react-example-mgiatpk.herokuapp.com/Movie`)
+      .get(`https://react-example-mgiatpk.herokuapp.com/Movie?name=${user.email}`)
       .then(result =>{
         this.setState({
           MovieArr : result.data
@@ -111,7 +111,7 @@ class BestMovies extends React.Component {
       }
 
   render() {
-    //const { isAuthenticated  } = this.props.auth0;
+    const { isAuthenticated  } = this.props.auth0;
 
     return (
       
