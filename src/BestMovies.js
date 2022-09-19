@@ -21,7 +21,7 @@ class BestMovies extends React.Component {
   }
   
     componentDidMount = () => {
-      const { user } = this.props.auth0;
+      //const { user } = this.props.auth0;
       axios
       .get(`https://react-example-mgiatpk.herokuapp.com/Movie`)
       .then(result =>{
@@ -111,7 +111,7 @@ class BestMovies extends React.Component {
       }
 
   render() {
-    const { user } = this.props.auth0;
+    //const { isAuthenticated  } = this.props.auth0;
 
     return (
       
