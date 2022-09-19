@@ -64,3 +64,14 @@ body {
     text-align:center;
     margin-top:5vh;
 }
+
+.nav-item {
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+.in_out_button {
+    border-radius: 0.5rem;
+    border: none;
+    font-size: 1em;
+}
