@@ -23,7 +23,7 @@ class BestMovies extends React.Component {
     componentDidMount = () => {
       const { user } = this.props.auth0;
       axios
-      .get(`https://react-example-mgiatpk.herokuapp.com/Movie?name=${user.email}`)
+      .post(`https://react-example-mgiatpk.herokuapp.com/Movie${user.email}`)
       .then(result =>{
         this.setState({
           MovieArr : result.data
